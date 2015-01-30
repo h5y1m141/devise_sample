@@ -1,0 +1,22 @@
+defaults: &defaults
+  adapter: mysql2
+  encoding: utf8mb4
+  charset: utf8mb4
+  collation: utf8mb4_general_ci
+  pool: 5
+  username: hoyamada
+  password: orih6254
+  socket: /tmp/mysql.sock
+
+development:
+  <<: *defaults
+  database: device_development
+
+test:
+  <<: *defaults
+  database: device_test
+
+production:
+  <<: *defaults
+  host: production_db_host
+  database: device_production
